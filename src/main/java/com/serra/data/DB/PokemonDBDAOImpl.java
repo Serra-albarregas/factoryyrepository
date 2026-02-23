@@ -1,4 +1,4 @@
-package com.serra.DB;
+package com.serra.data.DB;
 
 import java.sql.*;
 import java.time.LocalDateTime;
@@ -7,7 +7,7 @@ import java.util.List;
 
 import com.serra.model.POJO.Pokemon;
 
-public class PokemonDBDAO {
+public class PokemonDBDAOImpl implements IPokemonBDDAO {
 
     public Pokemon findById(int id) {
         try {

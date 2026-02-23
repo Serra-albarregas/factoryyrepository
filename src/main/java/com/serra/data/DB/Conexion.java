@@ -1,4 +1,4 @@
-package com.serra.DB;
+package com.serra.data.DB;
 
 import java.sql.Connection;
 import java.sql.SQLException;

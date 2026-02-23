@@ -26,8 +26,3 @@ CREATE TABLE IF NOT EXISTS pokemon_type (
     PRIMARY KEY(pokemon_id, type),
     FOREIGN KEY (pokemon_id) REFERENCES pokemon(id) ON DELETE CASCADE
 );
-
--- ==========================================
--- Índices útiles
--- ==========================================
-CREATE INDEX idx_type ON pokemon_type(type);

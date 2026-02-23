@@ -82,4 +82,7 @@ public class Pokemon {
         this.lastUpdate = lastUpdate;
     }
     
+    public boolean isExpired(int ttlHours){
+        return lastUpdate.plusHours(ttlHours).isBefore(LocalDateTime.now());
+    }
 }

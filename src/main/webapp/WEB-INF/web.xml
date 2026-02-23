@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" 
+         xmlns="http://www.oracle.com/webfolder/technetwork/jsc/xml/ns/javaee/index.html" 
+         xsi:schemaLocation="http://www.oracle.com/webfolder/technetwork/jsc/xml/ns/javaee/index.html
+                             http://www.oracle.com/webfolder/technetwork/jsc/xml/ns/javaee/web-app_4_0.xsd" 
+         id="WebApp_ID" version="4.0">
+  
+  <display-name>WelcomeFileList</display-name>
+    <welcome-file-list>
+        <welcome-file>galeria</welcome-file>
+    </welcome-file-list>
+</web-app>
