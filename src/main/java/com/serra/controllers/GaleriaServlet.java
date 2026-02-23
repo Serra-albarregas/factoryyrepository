@@ -12,7 +12,6 @@ import javax.servlet.http.HttpServletResponse;
 import com.serra.data.PokemonRepositoryImpl;
 import com.serra.data.interfaces.IPokemonRepository;
 import com.serra.model.DTO.PokemonDTO;
-import com.serra.model.POJO.Pokemon;
 
 @WebServlet(urlPatterns = {"/galeria"})
 public class GaleriaServlet extends HttpServlet {
@@ -21,16 +20,7 @@ public class GaleriaServlet extends HttpServlet {
         IPokemonRepository repository = new PokemonRepositoryImpl();
 
         List<PokemonDTO> pokemons = repository.getAll();
-        for (PokemonDTO pokemonDTO : pokemons) {
-            System.out.println(pokemonDTO.getName());
-        }
-        Pokemon pokemon = repository.getPokemon(1);
-        System.out.println(pokemon.getName());
-        pokemon = repository.getPokemon(2);
-        System.out.println(pokemon.getName());
-        pokemon = repository.getPokemon(3);
-        System.out.println(pokemon.getName());
-        pokemon = repository.getPokemon(4);
-        System.out.println(pokemon.getName());
+        req.setAttribute("pokemons", pokemons);
+        req.getRequestDispatcher("galeria.jsp").forward(req, resp);
     }
 }
